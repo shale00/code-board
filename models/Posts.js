@@ -8,7 +8,7 @@ class Posts extends Model {
   }
 }
 
-Posts.init(// changed to posts
+Posts.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,21 +16,18 @@ Posts.init(// changed to posts
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    body: {
       type: DataTypes.STRING,
       allowNull: false,
-      // foreign key
-      // post content 
-      // content 
-      // above would replace below.
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
+    // description: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id',
@@ -42,7 +39,7 @@ Posts.init(// changed to posts
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'posts',
   }
 );
 

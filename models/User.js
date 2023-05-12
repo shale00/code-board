@@ -20,8 +20,8 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
+    username: {
+      type: DataTypes.TEXT,
       allowNull: false,
       unique: true,
       validate: {
@@ -35,6 +35,14 @@ User.init(
         len: [8],
       },
     },
+    linkedin: {
+      type: DataTypes. STRING,
+      allowNull: true,
+    },
+    github: {
+      type: DataTypes. STRING,
+      allowNull: true,
+    }
   },
   {
     hooks: {

@@ -7,7 +7,6 @@ class Posts extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
 Posts.init(
   {
     id: {
@@ -43,4 +42,4 @@ Posts.init(
   }
 );
 
-module.exports = User;
+module.exports = Posts;

@@ -7,8 +7,7 @@ class Posts extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
-Posts.init(// changed to posts
+Posts.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,43 +15,31 @@ Posts.init(// changed to posts
       primaryKey: true,
       autoIncrement: true,
     },
+    body: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // description: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      // foreign key
-      // post content 
-      // content 
-      // above would replace below.
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
+      references: {
+        model: 'user',
+        key: 'id',
       },
     },
   },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'posts',
   }
 );
 
-module.exports = User;
+module.exports = Posts;

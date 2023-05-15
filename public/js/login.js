@@ -26,3 +26,17 @@ const submit = document
   .querySelector('#login-form') 
 submit
   .addEventListener('click', (e) => loginFormHandler(e));
+
+  // $('#myModal').on('shown.bs.modal', function () {
+  //   $('#myInput').trigger('focus')
+  // })
+
+  //Modal listener
+document.getElementById("registerBtn").addEventListener("click", function() {
+  // Get the modal element
+  var modal = document.getElementById("staticBackdrop4");
+
+  // Show the modal
+  var modalBootstrap = new bootstrap.Modal(modal);
+  modalBootstrap.show();
+});

@@ -14,7 +14,7 @@ router.get('/posts', async (req, res) => {
 });
 
 //Get all users including respective post data (to move or remove from this file)
-router.get('/users', async (req, res) => {
+router.get('/user', async (req, res) => {
     try {
         const userPost = await User.findAll({
             include: [{ model: Posts }]

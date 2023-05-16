@@ -10,33 +10,6 @@ var newPostForm = document.getElementById('newPostForm');
 var currentPosts = 5;
 var increment = 5;
 
-// Function to display the posts
-function displayPosts() {
-    feed.innerHTML = '';
-
-    for (var i = 0; i < currentPosts; i++) {
-        var post = posts[i];
-        var postElement = document.createElement('div');
-        postElement.className = 'post';
-
-        var titleElement = document.createElement('h2');
-        titleElement.textContent = post.title;
-
-        var contentElement = document.createElement('p');
-        contentElement.textContent = post.content;
-
-        postElement.appendChild(titleElement);
-        postElement.appendChild(contentElement);
-
-        feed.appendChild(postElement);
-    }
-
-    if (currentPosts < posts.length) {
-        showMoreButton.style.display = 'block';
-    } else {
-        showMoreButton.style.display = 'none';
-    }
-}
 
 // Event listener for "Show 5 More" button
 showMoreButton.addEventListener('click', function () {
@@ -56,24 +29,41 @@ closeModal.addEventListener('click', function () {
     newPostModal.style.display = 'none';
 });
 
-// Event listener for submitting a new post
-newPostForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var title = newPostForm.elements['title'].value;
-    var content = newPostForm.elements['content'].value;
 
-    // Add the new post to the array
-    posts.push({ title: title, content: content });
+const newPost = async (event) => {
+    event.preventDefault();
 
-    // Reset the form
-    newPostForm.reset();
+    // const title = document.querySelector('#title').value.trim();
+    const body = document.querySelector('#content').value.trim();
 
-    // Close the modal
-    newPostModal.style.display = 'none';
+    if(title && content ) {
+        const response = await fetch ('api/post/create', {
+           method: 'POST',
+           body: JSON.stringify({ body }),
+           headers: { 'Content-Type': 'application/json' },
+        });
 
-    // Update the displayed posts
-    displayPosts();
-});
+        if(response.ok){
+            alert(`Created a new post!`)
+            document.location.replace('/');
+        } else {
+            alert(`something is wrong`)
+        }
+    }
 
-// Initial display of posts
-displayPosts();
+     // Reset the form
+     newPostForm.reset();
+
+     // Close the modal
+     newPostModal.style.display = 'none';
+ 
+     // Update the displayed posts
+     displayPosts();
+    
+}
+
+const create = document
+  .querySelector('#createPostSubmit') 
+create
+  .addEventListener('click', (e) => newPost(e));
+

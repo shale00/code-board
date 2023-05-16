@@ -1,12 +1,12 @@
 [
   {
     "name": "Sal",
-    "username": "sal@hotmail.com",
+    "email": "sal@hotmail.com",
     "password": "password12345"
   },
   {
     "name": "Lernantino",
-    "username": "lernantino@gmail.com",
+    "email": "lernantino@gmail.com",
     "password": "password12345"
   },
   {
@@ -16,12 +16,12 @@
   },
   {
     "name": "Jordan",
-    "username": "jordan99@msn.com",
+    "email": "jordan99@msn.com",
     "password": "password12345"
   },
   {
     "name": "Blake",
-    "username": "the_blake@yahoo.com",
+    "email": "the_blake@yahoo.com",
     "password": "password12345"
   }
 ]

@@ -1,18 +1,42 @@
-{{!-- todos --}}
-{{!-- update users to posts --}}
-{{!-- use bootstrap to style page --}}
-{{!-- format html to look how we want homepage to be --}}
+<!DOCTYPE html>
+<html>
 
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
+<head>
+  <title>Homepage</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to the Homepage</h1>
+
+  <div id="feed">
+    {{#each posts}}
+    <div class="post">
+      <h2>{{title}}</h2>
+      <p>{{content}}</p>
+    </div>
+    {{/each}}
   </div>
-  <button>
-    {{!-- set on click --}}
-  </button>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+
+  <button id="showMoreButton">Show 5 More</button>
+
+  <button id="newPostButton">New Post</button>
+
+  <div id="newPostModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Create a New Post</h2>
+      <form id="newPostForm">
+        <input type="text" name="title" placeholder="Title"><br>
+        <textarea name="content" placeholder="Content"></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
-</div>
-{{/each}}
+
+  <script src="homepage.js"></script>
+</body>
+
+</html>

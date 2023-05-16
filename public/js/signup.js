@@ -22,8 +22,6 @@ const signupFormHandler = async (event) => {
             alert(`missing information`)
         }
     }
-
-    
 }
 
 const create = document

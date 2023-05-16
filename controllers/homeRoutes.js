@@ -11,6 +11,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//TODO: Is this working properly?
 router.get('/posts', async (req, res) => { // added post route
   try {
     const postData = await Posts.findAll();
@@ -35,11 +36,11 @@ router.get('/:numPosts', withAuth, async (req, res) => {
   try {
     const userPost = await Posts.findAll({
       include: [{ model: User, attributes: { exclude: ['password'] } }],
-      limit: parseInt(req.params.numPosts)
+      limit: parseInt(req.params.numPosts),
+      order: [[ 'id', 'DESC' ]]
     });
 
     const posts = userPost.map((project) => project.get({ plain: true }));
-    console.log(posts);
     const end = posts.length >= req.params.numPosts
     res.render('homepage', {
       posts,

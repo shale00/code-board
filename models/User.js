@@ -36,10 +36,12 @@ User.init(
     linkedin: {
       type: DataTypes. STRING,
       allowNull: true,
+      unique: true,
     },
     github: {
       type: DataTypes. STRING,
       allowNull: true,
+      unique: true,
     }
   },
   {

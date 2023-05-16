@@ -67,7 +67,7 @@
     <div class="modal-dialog d-flex justify-content-center">
         <div class="modal-content w-75">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel4">Write to us</h5>
+                <h5 class="modal-title" id="exampleModalLabel4">Create a new Account</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4">
@@ -86,14 +86,19 @@
 
                     <!-- Github input -->
                     <div class="form-outline mb-4">
-                        <input type="email" id="email4" class="form-control" />
-                        <label class="form-label" for="email4">Email address</label>
+                        <input type="text" id="github" class="form-control" />
+                        <label class="form-label" for="github">GitHub</label>
                     </div>
 
                     <!-- LinkedIn input -->
                     <div class="form-outline mb-4">
-                        <input type="email" id="email4" class="form-control" />
-                        <label class="form-label" for="email4">Email address</label>
+                        <input type="text" id="linkedIn" class="form-control" />
+                        <label class="form-label" for="linkedIn">LinkedIn</label>
+                    </div>
+                      <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="password" class="form-control" />
+                        <label class="form-label" for="password">Password</label>
                     </div>
 
                     {{!-- <!-- textarea input -->
@@ -111,7 +116,7 @@
                     </div> --}}
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+                    <button id="createAccountSubmit" type="submit" class="btn btn-primary btn-block">Send</button>
                 </form>
             </div>
         </div>
@@ -120,3 +125,4 @@
 <!-- Modal -->
 
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>

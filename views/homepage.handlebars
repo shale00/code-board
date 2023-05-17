@@ -1,7 +1,7 @@
 
   <h1>Welcome to the Homepage</h1>
 
-  {{!-- <div id="feed"> --}}
+  <div id="feed">
 
 {{!-- Card should be a partial --}}
     {{#each posts as |post|}}
@@ -16,22 +16,40 @@
     </div>
     {{/each}}
 
-  {{!-- </div> --}}
+  </div>
 
   <button id="showMoreButton">Show 5 More</button>
 
-  <button id="newPostButton">New Post</button>
 
-  <div id="newPostModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Create a New Post</h2>
-      <form id="newPostForm">
-        <input type="text" id="title" name="title" placeholder="Title"><br>
-        <textarea name="content" id="content" placeholder="Content"></textarea><br>
-        <input type="submit" id="createPostSubmit" value="Submit">
-      </form>
+
+<button type="button" id="newPostButton" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop4">
+    New Post
+</button>
+
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+        <div class="modal-content w-75">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel4">New Post</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="newPostForm">
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="name4">Write your message here:</label>
+                        <input type="text" id="content" class="form-control" />
+                    </div>
+
+                    <!-- Submit button -->
+                    <button id="createPostSubmit" type="submit" class="btn btn-primary btn-block">Post Message</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+<!-- Modal -->
 
   <script src="/js/homepage.js"></script>
+  <script src="/js/createpost.js"></script>

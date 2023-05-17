@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+  } 
 
-#testcss {
-    color:aqua;
+  /* Card background */
+#card-background{
+    background-image: url("/images/corkboard.jpg");
+    background-size: contain;
 }
 
 /* Some positioning and ratios */
@@ -62,12 +69,8 @@
 
 
 /* Position the sticky nicely, so it looks better */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-}
+/* html,
+
 
 
 /* Add responsiveness */

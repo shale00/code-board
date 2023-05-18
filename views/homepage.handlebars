@@ -1,3 +1,14 @@
+<div id="homepage-container">
+  {{!-- Homepage tile --}}
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Career Connections</h1>
+    <p class="lead">Discover, Connect, and Succeed Together</p>
+  </div>
+{{!-- HandleBar partial --}}
+{{#each posts as |post|}}
+  {{> postDetails}}
+{{/each}}
+
 
   <h1>Welcome to the Homepage</h1>
 
@@ -53,3 +64,4 @@
 
   <script src="/js/homepage.js"></script>
   <script src="/js/createpost.js"></script>
+

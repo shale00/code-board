@@ -11,7 +11,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-//TODO: Is this working properly?
+
 router.get('/posts', async (req, res) => { // added post route
   try {
     const postData = await Posts.findAll();

@@ -1,23 +1,47 @@
-var feed = document.getElementById('feed');
-var showMoreButton = document.getElementById('showMoreButton');
-var newPostButton = document.getElementById('newPostButton');
-var newPostModal = document.getElementById('newPostModal');
-var closeModal = document.getElementsByClassName('close')[0];
-var newPostForm = document.getElementById('newPostForm');
+// var feed = document.getElementById('feed');
+var showMoreButton = document.getElementById('showmoreButton');
+// var newPostButton = document.getElementById('newPostButton');
+// var newPostModal = document.getElementById('newPostModal');
+// var closeModal = document.getElementsByClassName('close')[0];
+// var newPostForm = document.getElementById('newPostForm');
 
 
 
-var currentPosts = 5;
+var currentPosts = parseInt(window.location.pathname.slice(1));
+console.log(window.location.pathname.slice(1));
 var increment = 5;
 
 
+
 // Event listener for "Show 5 More" button
-showMoreButton.addEventListener('click', function () {
+showmoreButton.addEventListener('click', function () {
     currentPosts += increment;
-    window.location.href= `/${currentPosts}`;
-    console.log(currentPosts);
-    // displayPosts();
+    window.location.href= `/${currentPosts}`;    
 });
+
+// Event listener for "Show 5 More" button
+// showmoreButton.addEventListener('click', function () {
+//   currentPosts += increment;
+//   window.location.href = `/${currentPosts}`;
+
+//   // Add focus to the bottom 5 posts
+//   setTimeout(() => {
+//     const posts = document.querySelectorAll('.post');
+//     const numPosts = posts.length;
+//     const startIndex = numPosts - 5 < 0 ? 0 : numPosts - 5;
+
+//     for (let i = startIndex; i < numPosts; i++) {
+//       posts[i].classList.add('focus');
+//     }
+//   }, 500); // Adjust the timeout delay if needed
+// });
+
+
+
+
+
+
+
 
 // // Event listener for "New Post" button
 // newPostButton.addEventListener('click', function () {

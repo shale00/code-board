@@ -19,7 +19,7 @@ body {
 #user-name {
   text-align: center;
 }
-#user-content {
+.user-content {
   font-family: "Montserrat", sans-serif;
   background-color: rgb(223, 237, 248);
   box-shadow: -5px 5px 15px 0 rgba(0, 0, 0, 0.5);

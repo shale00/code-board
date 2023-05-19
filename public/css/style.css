@@ -3,8 +3,6 @@
 body {
   height: 100%;
   margin: 0;
-  font-size: 16px;
- 
 }
 
 /* Card background */
@@ -15,6 +13,7 @@ body {
   border-radius: 15px;
   border: 15px solid #644615;
   box-shadow: -3px 3px 18px 0 rgba(0, 0, 0, 0.5);
+  font-size: 500px;
 }
 #user-name {
   text-align: center;
@@ -74,6 +73,11 @@ body {
   clip-path: url(#stickyClip);
 }
 
+.content-text {
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
 /* Add responsiveness */
 @media screen and (min-width: 640px) {
   .sticky-content {
@@ -104,7 +108,7 @@ body {
 
 #showMoreButton,
 #login-form,
-#createPostSubmit
+#createPostSubmit,
 #createAccountSubmit {
   max-width: 100px;
   max-height: 60px;

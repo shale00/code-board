@@ -1,3 +1,7 @@
+    <nav id="inlinebuttons">
+      <button type="button" id="newPostButton" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop4">New Post</button>
+      <button class="btn btn-primary" id="logout">Logout</button>
+    </nav>
 <div id="homepage-container">
   {{!-- Homepage tile --}}
   <div class="jumbotron text-center">
@@ -8,26 +12,6 @@
 {{#each posts as |post|}}
   {{> postDetails}}
 {{/each}}
-
-
-  <h1>Welcome to the Homepage</h1>
-
-  <div id="feed">
-
-{{!-- Card should be a partial --}}
-    {{#each posts as |post|}}
-    <div class="row align-center mb-5">
-      <div class="col-md-6">
-        <h2>{{user.name}}</h2>
-      <p>{{post.body}}</p>
-      <p>{{user.linkedin}}</p>
-      <p>{{user.github}}</p>
-      <p>{{user.email}}</p>
-      </div>
-    </div>
-    {{/each}}
-
-  </div>
 
   <button id="showMoreButton" class="btn btn-primary">Show 5 More</button>
 

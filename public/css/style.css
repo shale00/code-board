@@ -4,6 +4,7 @@ body {
   height: 100%;
   margin: 0;
   font-size: 16px;
+ 
 }
 
 /* Card background */
@@ -102,7 +103,7 @@ body {
 }
 
 #showMoreButton,
-#registerBtn, #login-form,
+#login-form,
 #createPostSubmit
 #createAccountSubmit {
   max-width: 100px;
@@ -131,4 +132,14 @@ body {
   position: fixed;
 }
   
+#registerBtn {
+  max-width: 100px;
+  max-height: 60px;
+  min-width: 100px;
+  min-height: 60px;
+  float: center;
+}
 
+#createModal, #newPostModalColor {
+  background-color: #fff7e8;
+}

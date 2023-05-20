@@ -3,12 +3,6 @@ const { User, Posts } = require('../../models');
 
 
 //Create a new post 
-//should look something like this:
-// {
-//     "title": ""    
-//     "body": "I am interested in a job: Web-Dev",
-//     "user_id": 3
-// }
 router.post('/create', async (req, res) => {
     try {
         const postData = {
@@ -22,7 +16,5 @@ router.post('/create', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-
 
 module.exports = router;

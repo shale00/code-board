@@ -27,12 +27,3 @@ const submit = document
 submit
   .addEventListener('click', (e) => loginFormHandler(e));
 
-  //Modal listener --this is not doing anythingTODO:
-// document.getElementById("registerBtn").addEventListener("click", function() {
-//   // Get the modal element
-//   var modal = document.getElementById("staticBackdrop4");
-
-//   // Show the modal
-//   // var modalBootstrap = new bootstrap.Modal(modal);
-//   // modalBootstrap.show();
-// });

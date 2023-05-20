@@ -12,21 +12,6 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/posts', async (req, res) => { // added post route
-  try {
-    const postData = await Posts.findAll();
-
-    const posts = postData.map((post) => project.get({ plain: true }));
-
-    res.render('homepage', {
-      users,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
-
 router.get('/', (req,res) => {
   res.redirect('/5')
 })

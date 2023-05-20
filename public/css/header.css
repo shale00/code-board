@@ -24,13 +24,6 @@ p {
   background: linear-gradient(60deg, #2D68C4 0%, rgba(242,169,0) 100%);
   color:white;
 }
-/* .logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-} */
 
 .inner-header {
   height:15vh;
@@ -50,7 +43,7 @@ p {
   position:relative;
   width: 100%;
   height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
+  margin-bottom:-7px;
   min-height:100px;
   max-height:150px;
 }
@@ -62,8 +55,11 @@ p {
   background-color: white;
 }
 
-/* Animation */
+.form-control {
+  background-color: #f1f1f1;
+}
 
+/* Animation */
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }

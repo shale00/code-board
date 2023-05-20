@@ -14,10 +14,11 @@
   {{> postDetails}}
   {{/each}}
   {{#if end}}
-  <button id="showmoreButton">Show 5 More Posts</button>
+  <button id="showmoreButton" class="btn btn-outline-primary" data-mdb-toggle="modal"
+    data-mdb-target="#staticBackdrop4" >Show 5 More</button>
   {{/if}}
 
-  <!-- Modal -->
+  <!-- Create Post Modal -->
   <div class="modal fade" id="staticBackdrop4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
     <div class="modal-dialog d-flex justify-content-center modal-lg">
       <div class="modal-content w-75">
@@ -40,7 +41,7 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
+  <!-- End Create Post Modal -->
 
   <script src="/js/homepage.js"></script>
   <script src="/js/createpost.js"></script>

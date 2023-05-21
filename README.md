@@ -27,9 +27,9 @@
 
   ## Credits
 
-  Sticky note code sourced from: https://dev.to/thormeier/fully-responsive-html-css-sticky-note-4okl  
-  Header styling sourced from: https://codepen.io/goodkatz/pen/LYPGxQz
-  Styling sourced from Bootstrap: https://mdbootstrap.com/  
+  Sticky note code sourced from: https://dev.to/thormeier/fully-responsive-html-css-sticky-note-4okl.   
+  Header styling sourced from: https://codepen.io/goodkatz/pen/LYPGxQz.   
+  Styling sourced from Bootstrap: https://mdbootstrap.com/.   
 
   ## License
     This app is licensed under the MIT license.

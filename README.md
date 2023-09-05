@@ -3,7 +3,7 @@
   [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
   ## Description
-  This app is a job and career resource posting website where users can create an account. Once the user has created an account, they will be able to view, create, and delete their respective posts on the homepage.
+  We wanted to create a place where our classmates, who are on a similiar path to find a career in web development, could help each other along the way. This app is a job and career resource posting website where users can create an account. Once the user has created an account, they will be able to view, create, and delete their respective posts on the homepage.
 
 
   ## Table of Contents
